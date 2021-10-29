@@ -29,7 +29,7 @@ module.exports.newCharacter = (req, res) => {
     });
   }
   catch(err) {
-    res.json({status: 'error', message: err});
+    res.json({status: 'error controller', message: err});
   }
 };
 

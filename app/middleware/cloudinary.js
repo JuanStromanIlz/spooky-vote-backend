@@ -14,6 +14,6 @@ module.exports = cloudinaryUpload = async (req, res, next) => {
     next();
   }
   catch(err) {
-    res.json({status: 'error', message: err});;
+    res.json({status: 'error cloudinary', message: err});;
   }
 };
