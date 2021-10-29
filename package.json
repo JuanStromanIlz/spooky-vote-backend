@@ -1,0 +1,21 @@
+{
+  "name": "spooky-vote",
+  "version": "1.0.0",
+  "description": "API to vote in a halloween party.",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Juan Stroman Ilz",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.27.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "multer": "^1.4.3"
+  }
+}
