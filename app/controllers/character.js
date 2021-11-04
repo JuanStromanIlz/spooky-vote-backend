@@ -22,9 +22,11 @@ module.exports.newCharacter = (req, res) => {
         url: url,
         secure_url: secure_url
       }
-    }).save();
-    
-    res.json({status: 'success', message: 'character saved to db', user: newUser});
+    });
+
+    let savedUser = await newUser.save();
+
+    res.json({status: 'success', message: 'character saved to db', user: savedUser});
   }
   catch(err) {
     res.json({status: 'error controller', message: err});
