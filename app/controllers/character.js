@@ -10,7 +10,7 @@ module.exports.getAllCharacters = async (req, res) => {
   }
 };
 
-module.exports.newCharacter = (req, res) => {
+module.exports.newCharacter = async (req, res) => {
   try {
     let { name, actor } = req.body;
     let { url, secure_url } = res.locals.avatar;
