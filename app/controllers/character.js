@@ -15,18 +15,16 @@ module.exports.newCharacter = (req, res) => {
     let { name, actor } = req.body;
     let { url, secure_url } = res.locals.avatar;
 
-    new Character({
+    let newUser = new Character({
       name: name,
       actor: actor,
       avatar: {
         url: url,
         secure_url: secure_url
       }
-    }).save(err => {
-      if (!err) {
-        res.json({status: 'success', message: 'Characted saved to db.'});
-      }
-    });
+    }).save();
+    
+    res.json({status: 'success', message: 'character saved to db', user: newUser});
   }
   catch(err) {
     res.json({status: 'error controller', message: err});

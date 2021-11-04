@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
   res.send('API up and running');
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, ()=>{
     console.log(`Server runnig on port ${PORT}`);
 })
